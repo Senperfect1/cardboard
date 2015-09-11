@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Card Board</title>
+    <link href="@Url.Content("~/Content/Css/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Css/cardboard.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/jquery-2.1.0.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/knockout-3.0.0.js")"></script>
+    <script src="@Url.Content("~/Scripts/underscore.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/cardboard.js")"></script>
+    <script src="@Url.Content("~/Scripts/Main.js")"></script>
+    <script>
+        window.server = {
+            apiPath: "@Url.Content("~/api")",
+            applicationPath: "@Request.ApplicationPath"
+        };
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">My TFS Cardboard</a>
+            </div>
+        </div>
+    </div>
+    <div id="board"></div>
+</body>
+</html>
